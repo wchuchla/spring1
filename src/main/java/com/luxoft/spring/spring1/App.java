@@ -11,9 +11,9 @@ public class App {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-        PropertiesServiceImpl propertiesService = context.getBean("propertiesService", PropertiesServiceImpl.class);
+        PropertiesServiceImpl propertiesService = context.getBean("propertiesServiceImpl", PropertiesServiceImpl.class);
 
-        propertiesService.sayHello();
+        propertiesService.getAll();
 
     }
 
