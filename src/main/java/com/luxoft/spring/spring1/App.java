@@ -1,16 +1,17 @@
 package com.luxoft.spring.spring1;
 
+import com.luxoft.spring.spring1.config.ApplicationConfig;
 import com.luxoft.spring.spring1.service.PropertiesServiceImpl;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("/spring1/spring.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-        PropertiesServiceImpl propertiesService = context.getBean("propertiesService", PropertiesServiceImpl.class);
+        PropertiesServiceImpl propertiesService = context.getBean("propertiesServiceImpl", PropertiesServiceImpl.class);
 
         propertiesService.sayHello();
 
