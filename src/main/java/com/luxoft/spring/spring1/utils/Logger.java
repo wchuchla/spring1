@@ -1,8 +1,5 @@
 package com.luxoft.spring.spring1.utils;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Logger {
 
     private static Logger INSTANCE;

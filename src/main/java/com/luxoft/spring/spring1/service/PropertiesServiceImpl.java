@@ -5,11 +5,15 @@ import com.luxoft.spring.spring1.repository.PropertiesRepository;
 import com.luxoft.spring.spring1.utils.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE;
+
 @Service
+@Scope(SCOPE_PROTOTYPE)
 public class PropertiesServiceImpl implements PropertiesService {
 
     @Autowired
